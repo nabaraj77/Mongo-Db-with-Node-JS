@@ -10,6 +10,4 @@ const connectDb=async()=>{
     return db.collection('user')
 }
 
-
-
 module.exports=connectDb;

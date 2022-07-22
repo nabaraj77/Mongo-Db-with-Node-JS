@@ -1,10 +1,10 @@
 //DISPLAYING THE DATA OF MONGO DB or Reading Data of mongo DB
-const connectDb = require('./mongodb')
+const connectDb = require("./mongodb");
 
-const main=async()=>{
-    let data = await connectDb();
-    
-    data = await data.find({}).toArray();
-    console.log(data);
-}
-main()
+const displayData = async () => {
+  const data = await connectDb();
+
+  const result = await data.find({}).toArray();
+  console.log(result);
+};
+displayData();
